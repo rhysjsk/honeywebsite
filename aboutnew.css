@@ -1,0 +1,458 @@
+html {
+	box-sizing: border-box;
+}
+
+@media only screen and (min-width: 768px){
+
+	.col-1 {
+		width: 8.33%;
+	}
+
+	.col-2 {
+		width: 16.66%;
+	}
+
+	.col-3 {
+		width: 25%;
+	}
+
+	.col-4 {
+		width: 33.33%
+	}
+
+	.col-5 {
+		width: 41.66%;
+	}
+
+	.col-6 {
+		width: 50%;
+	}
+
+	.col-7 {
+		width: 58.33%;
+	}
+
+	.col-8 {
+		width: 66.66%;
+	}
+
+	.col-9 {
+		width: 75%;
+	}
+
+	.col-10 {
+		width: 83.33%;
+	}
+
+	.col-11 {
+		width: 91.66%;
+	}
+
+	.col-12 {
+		width: 100%;
+	}
+}
+
+[class*="col-"]{
+	/*float: left;
+	/*border: 1px solid red;*/
+}
+
+@media only screen and (max-width: 768px) {
+	[class*="col-"] {
+		width: 99%;
+	}
+}
+
+.row:after {
+	content: "";
+	clear: both;
+	display: block;
+}
+
+body {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #ffbf00;
+}
+
+.top {
+	z-index: 2;
+	top: 0;
+	font-family: sans-serif;
+	position: relative;
+}
+
+#logo img {
+	z-index: 2;
+	position: relative;
+	width: 10vw;
+	float: left;
+	margin-top: 20px;
+	margin-left: 0.5vw;
+}
+
+#menu {
+	background-color: transparent;
+	color: black;
+	border: none;
+	cursor: crosshair;
+	text-align: center;
+	font-size: 2.8vw;
+	position: relative;
+	display: block;
+	z-index: 2;
+	margin-right: 10vw;
+}
+
+.drop {
+	position: relative;
+	display: block;
+	float: right;
+	margin-top: 40px;
+}
+
+#dropcontent {
+	display: none;
+	position: absolute;
+	background-color: transparent;
+	clear: inherit;
+	font-size: 14px;
+	width: 100%;
+	text-align: center;
+	z-index: 5;
+}
+
+#dropcontent a {
+	color: black;
+	text-decoration: none;
+	display: block;
+	padding-top: 3vh;
+	padding: 5px;
+}
+
+.drop:hover{
+	text-decoration: underline;
+}
+
+.drop:hover #dropcontent {
+	display: block;
+	background-color: #e5e5e5;
+	padding-top: 10px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-shadow: 5px 5px 5px #000000;
+	-moz-box-shadow: 5px 5px 5px #000000;
+	box-shadow: 5px 5px 5px #000000;
+	right: 5vw;
+}
+
+#dropcontent a:hover {
+	text-decoration: underline;
+}
+
+#dropcontent a:visited, #dropcontent a:link {
+	color: black;
+}
+
+#home {
+	float: right;
+	padding-right: 5vw;
+	margin-top: 40px;
+	cursor: pointer;
+	display: block;
+	z-index: 3;
+	position: relative;
+	font-size: 2.8vw;
+}
+
+.home a:visited , .home a:link {
+	color: black;
+}
+
+#home:hover {
+	text-decoration: underline;
+}
+
+#title {
+	position: absolute;
+	text-align: center;
+	margin-top: 30px;
+	margin-left: 11vw;
+	font-size: 2.3vw;
+	z-index: 2;
+	font-family: 'Nosifer', sans-serif;
+	color: #f5720a;
+	cursor: default;
+}
+
+#content {
+	position: absolute;
+	top: 11vw;
+	margin-top: 20px;
+}
+
+p {
+	font-size: 16px;
+}
+
+#info {
+	display: inline-block;
+	position: relative;
+	margin-left: 10vw;
+}
+
+#ss img{
+	width: 50vw;
+	position: absolute;
+}
+
+#info p {
+	margin-left: 55vw;
+	font-size: 4.3vw;
+}
+
+#honey {
+	font-family: 'Nosifer', sans-serif;
+	color: #f5720a;
+}
+
+#b {
+	text-align: center;
+	font-size: 16px;
+}
+
+#b h2 {
+	font-size: 25.6px;
+}
+
+#frame img{
+	width: 40vw;
+}
+
+#keepers img{
+	width: 40vw;
+}
+
+figure {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	width: 40vw;
+}
+
+figcaption {
+	position: absolute;
+	background: rgba(0,0,0,0.75);
+	color: white;
+	opacity: 0;
+	padding: 10px 20px;
+	bottom: 0;
+	left: -30%;
+	-webkit-transition: all 0.6s ease;
+	-moz-transition: all 0.6s ease;
+	-o-transition: all 0.6s ease;
+	transition: all 0.6s ease;
+}
+
+figure:hover figcaption {
+	opacity: 1;
+	left: 0;
+}
+
+figure:before {
+	content:"?";
+	position: absolute;
+	background: rgba(255,255,255,0.75);
+	color: black;
+	width: 24px;
+	height: 24px;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	text-align: center;
+	font-size: 16px;
+	line-height: 24px;
+	-webkit-transition: all 0.6s ease;
+	-moz-transition: all 0.6s ease;
+	-o-transition: all 0.6s ease;
+	transition: all 0.6s ease;
+	bottom: 10px;
+	left: 10px;
+}
+
+figure:hover:before {
+	opacity: 0;
+}
+
+@media only screen and (max-width: 989px) {
+	#figures div {
+		width: 75%;
+	}
+
+	#figures div figure img, #figures div figure {
+		width: 600px;
+	}
+}
+
+@media only screen and (max-width: 650px){
+	#figures div figure img, #figures div figure {
+		width: 80vw;
+	}
+}	
+
+#spacer {
+	padding: 20px;
+}
+
+@media only screen and (max-width: 768px){
+	#spacer {
+		width: 75%;
+	}
+}
+
+#bees h2{
+	padding-left: 3vw;
+	font-size: 25.5px;
+}
+
+#bees p {
+	padding-left: 2vw;
+}
+
+#beeclose img{
+	width: 330px;
+}
+
+@media only screen and (min-width: 1200px){
+	#beeclose img{
+		padding-left: 9vw;
+	}
+}
+
+@media only screen and (max-width: 1199px){
+	#beeclose img {
+		padding-left: 6.5vw;
+	}
+}
+
+@media only screen and (min-width: 768px){
+	#beeclose img{
+		margin-top: 5vw;
+	}
+}
+
+@media only screen and (min-width: 830px) {
+	#beeclose img{
+		margin-top: 3vw;
+	}
+}
+
+@media only screen and (min-width: 1024px){
+	#beeclose img{
+		margin-top: 0;
+	}
+}
+
+@media only screen and (max-width: 786px){
+	#beeclose {
+		text-align: center;
+	}
+}
+
+#MND img{
+	width: 32vw;
+	position: relative;
+}
+
+@media only screen and (min-width: 1080px){
+	#MND img{
+		width: 30vw
+	}
+}
+
+@media only screen and (max-width:768px){
+	#MND img {
+		width: 300px;
+		padding-left: 5vw;
+	}
+}
+
+@media only screen and (max-width:768px){
+	#mndp {
+		padding-left: 2vw;
+	}
+}
+
+#MNDlink , #MNDlink:visited {
+	text-decoration: none;
+	color: #389dff;
+}
+
+#MNDlink:hover {
+	text-decoration: underline;
+}
+
+#galileo {
+	text-align: center;
+}
+
+@media only screen and (max-width: 768px){
+	#galileo {
+		padding-left: 1vw;
+	}
+}
+
+#galileo img {
+	width: 30vw;
+	position: relative;
+}
+
+@media only screen and (max-width:1080px){
+	#galileo img {
+		width: 300px;
+	}
+}
+
+.galileoh2 {
+	text-align: center;
+	font-size: 26.5px;
+}
+
+#contact {
+	text-align:center;
+}
+
+@media only screen and (min-width: 768px){
+	#contact {
+		margin-top: 5vw;
+	}
+}
+
+@media only screen and (max-width: 768px){
+	#contact {
+		position: absolute;
+		bottom: 0;
+		color: #ffbf00;
+		z-index: -1;
+	}
+
+	#galileoh2 {
+		position: absolute;
+	}
+}
+
+#contact2 {
+	text-align: center;
+}
+
+@media only screen and (min-width: 786px){
+	#contact2 {
+		color: #ffbf00;
+		position: absolute;
+		margin-top: -200px;
+		z-index: -1;
+	}
+}
