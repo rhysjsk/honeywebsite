@@ -14,7 +14,7 @@
 			<div class="drop">
 				<span id="menu">Menu</span> 
 					<div id="dropcontent">
-							<div><a href="order.html">Order </a></div>		
+							<div><a href="order.php">Order </a></div>		
 							<div><a href="meettheteam.html">Meet the team </a></div>
 							<div><a href="ourstory.html">Our story </a></div>
 					</div>
@@ -27,7 +27,7 @@
 		</div>
 		<div id="order-form">
 			<h1>Honey order form</h1>
-			<form action="order-submit.php">
+			<form action="order-submit.php" method="POST">
 				<div class="form-title">Name</div>
 				<input type="text" id="name" name="name"/>
 				<div class="form-title">Email</div>
