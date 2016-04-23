@@ -28,9 +28,9 @@
 	$query = "INSERT INTO customers (name,email,item,street,suburb,postcode,state) VALUES ('$name', '$email', 'small', '$street', '$suburb', '$postcode', '$state')";
 
 	if ($result = $mysqli->query($query)) {
-	    echo "success";
+	    //echo "success";
 	} else {
-	    echo "Error with database, please try again later";
+	    die("Error with database, please try again later");
 	}
 	// Closing connection
 	$mysqli->close();
