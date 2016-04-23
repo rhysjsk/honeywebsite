@@ -1,4 +1,4 @@
-<?php require_once('./config.php'); ?>
+<?php require_once('./config2.php'); ?>
 <html>
 	<head>
 		<title>Order honey</title>
@@ -61,10 +61,6 @@
 					</form>
 				</form>
 			</div>
-		</div>
-		<div id="success">
-			<div class="title">Submission successful!</div>
-			<div class="subtitle">Thank you for your order</div>
 		</div>
 	</body>
 </html>
