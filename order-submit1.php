@@ -17,7 +17,7 @@
 
   	error_reporting (E_ERROR);
 	// Connecting, selecting database
-	$mysqli = new mysqli('127.0.0.1', 'galileo', '8yp6Y5', 'galileo');
+	$mysqli = new mysqli('127.0.0.1', $db->user, $db->password, $db->name);
 	$name = $_POST["stripeShippingName"];
 	$email = $_POST["stripeEmail"];
 	$street = $_POST["stripeShippingAddressLine1"];
