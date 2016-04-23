@@ -26,40 +26,41 @@
 			<div style="clear:both"></div>
 		</div>
 		<div id="order-form">
-			<h1>Honey order form</h1>
-			<form action="order-submit.php" method="POST">
-				<div class="form-title">Name</div>
-				<input type="text" id="name" name="name"/>
-				<div class="form-title">Email</div>
-				<input type="text" id="email" name="email"/>
-				<div class="form-title">Street Name & number</div>
-				<input type="text" id="street" name="street"/>
-				<div class="form-title">Suburb</div>
-				<input type="text" id="suburb" name="suburb"/>
-				<div class="form-title">Postcode</div>
-				<input type="text" id="postcode" name="postcode">
-				<div class="form-title">State</div>
-				<select id="state" name="state">
-					<option value="ACT">ACT</option>
-					<option value="NSW">NSW</option>
-					<option value="NT">NT</option>
-					<option value="QLD">Queensland</option>
-					<option value="SA">SA</option>
-					<option value="TAS">Tasmania</option>
-					<option value="VIC">Victoria</option>
-					<option value="WA">WA</option>
-				</select>
-				<form action="" method="POST">
-				  <script
-				    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-				    data-key="<?php echo $stripe['publishable_key']; ?>"
-				    data-amount="2000"
-				    data-name="Demo Site"
-				    data-description="2 widgets ($20.00)"
-				    data-image="/128x128.png"
-				    data-locale="auto">
-				  </script>
+			<h1>Select which sized jar you would like</h1>
+			<div class="item">
+				<div class="title">A small jar - $8.00</div>
+				<form action="order-submit1.php" method="POST">
+					<form action="" method="POST">
+					  <script
+					    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+					    data-key="<?php echo $stripe['publishable_key']; ?>"
+					    data-amount="800"
+					    data-name="Galileo Honey"
+					    data-description="A Small Jar ($8.00)"
+					    data-image="/honeyicon.png"
+					    data-shipping-address="true"
+					    data-locale="auto">
+					  </script>
+					</form>
 				</form>
+			</div>
+			<div class="item">
+				<div class="title">A big jar - $12.00</div>
+				<form action="order-submit2.php" method="POST">
+					<form action="" method="POST">
+					  <script
+					    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+					    data-key="<?php echo $stripe['publishable_key']; ?>"
+					    data-amount="1200"
+					    data-name="Galileo Honey"
+					    data-description="A Big Jar ($12.00)"
+					    data-image="/honeyicon.png"
+					    data-shipping-address="true"
+					    data-locale="auto">
+					  </script>
+					</form>
+				</form>
+			</div>
 		</div>
 		<div id="success">
 			<div class="title">Submission successful!</div>
